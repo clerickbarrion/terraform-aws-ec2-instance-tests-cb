@@ -22,7 +22,7 @@ resource "aws_vpc" "test_vpc" {
 resource "aws_subnet" "test_subnet" {
   vpc_id            = aws_vpc.test_vpc.id
   cidr_block        = "10.0.1.0/24"
-  availability_zone = "us-west-1a"
+  availability_zone = "us-west-1b"  # Changed from us-west-1a
   
   tags = {
     Name = "test-subnet"
